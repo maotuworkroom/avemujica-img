@@ -74,6 +74,7 @@ footer {
 @media (max-width: 576px) {
     #editor {
         padding: 1rem;
+        z-index: 9999;
     }
 
     canvas {
@@ -189,6 +190,7 @@ header {
     display: none;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 9999;
 }
 
 canvas {
