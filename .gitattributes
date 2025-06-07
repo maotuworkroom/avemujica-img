@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.bat
+*.py
+.vscode
+.git
+*.7z
+*.mp4
+*.mkv

@@ -1,0 +1,218 @@
+[data-bs-theme="dark"] {
+    --bs-primary: #a03458 !important;
+    --bs-secondary: #bb9955 !important;
+    --bs-success: #00c853 !important;
+    --bs-danger: #d50000 !important;
+    --bs-warning: #ffab00 !important;
+    --bs-info: #335566 !important;
+    --bs-light: #f5f5f5 !important;
+    --bs-dark: #212121 !important;
+}
+
+footer .btn {
+    margin: 0.5rem !important;
+    padding: 0.5rem 0rem !important;
+}
+
+footer small {
+    color: #4d4d53 !important;
+}
+
+footer {
+    padding: 1rem;
+    background: transparent !important;
+}
+
+.footer-with-bg {
+    position: relative;
+    overflow: hidden;
+    background: #222;
+    color: #eee;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #444;
+}
+
+.footer-with-bg .footer-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('Hollen9LOGOFULL_216x60.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 216px 60px;
+    opacity: 0.1;
+    /* 控制圖片淡淡的程度 */
+    pointer-events: none;
+    /* 避免擋住按鈕點擊 */
+    z-index: 0;
+}
+
+.footer-with-bg .footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: #ff4081 !important;
+    border-color: #ff4081 !important;
+}
+
+.bg-secondary {
+    background-color: #7c4dff !important;
+}
+
+.btn-info {
+    background-color: #335566 !important;
+    color: #eee !important;
+}
+
+.text-primary {
+    color: #ff4081 !important;
+}
+
+
+@media (max-width: 576px) {
+    #editor {
+        padding: 1rem;
+    }
+
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.form-control:focus {
+    border-color: #aa4477 !important;
+    box-shadow: 0 0 0 0.2rem rgba(170, 68, 119, 0.25) !important;
+}
+
+.choices__input {
+    background-color: #212529 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #555 !important;
+    border-radius: 6.5px !important;
+}
+
+.choices__list--multiple .choices__item {
+    background-color: #881144 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444 !important;
+}
+
+.choices__inner {
+    background-color: #212529 !important;
+    border-color: #aa4477 !important;
+    border-radius: 6.5px !important;
+    border: 1px solid #555 !important;
+}
+
+.is-open .choices__inner {
+    border-color: #aa4477 !important;
+    border-radius: 6.5px 2.5px 0 0 !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+    background-color: #212529 !important;
+}
+
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+    background-color: #881144 !important;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: #bb9955 !important;
+    color: #fff !important;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    padding: 1rem;
+    background: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.img-card {
+    position: relative;
+    border: 1px solid #444;
+    background: #1a1a1a;
+}
+
+.img-card img {
+    max-width: 320px;
+    display: block;
+}
+
+.img-card .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+}
+
+#editor {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    border: 1px solid #555;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+canvas {
+    border: 1px solid #555;
+}
+
+button {
+    background: #333;
+    color: #eee;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+select,
+input[type="text"] {
+    background: #1c1c1c;
+    color: #eee;
+    border: 1px solid #555;
+    padding: 0.3rem;
+}
+
+.editor-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}

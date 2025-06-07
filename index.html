@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ave Mujica 字幕搜尋與截圖產生器</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <!-- Choices.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css?ver=2025060721" />
+  
+</head>
+
+<body>
+  <header class="bg-dark text-light py-3 border-bottom border-secondary">
+    <div class="container">
+      <div class="row g-2 mb-2">
+        <!-- 選擇集數：獨立一列 -->
+        <div class="col-12">
+          <label class="form-label">選擇集數</label>
+          <select id="episodeSelect" multiple class="form-select" style="min-height: 120px;"></select>
+        </div>
+      </div>
+      <div class="row g-2">
+        <!-- 語言選擇 -->
+        <div class="col-md-3 col-6">
+          <label class="form-label">語言</label>
+          <select id="langSelect" class="form-select">
+            <option value="zh">繁體中文</option>
+            <option value="zh_cn">簡體中文</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+        <!-- 搜尋 -->
+        <div class="col-md-9 col-6">
+          <label class="form-label">搜尋字幕</label>
+          <input type="text" id="searchBox" class="form-control" placeholder="輸入台詞搜尋..." />
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="gallery" id="gallery"></main>
+
+  <div id="editor" class="container bg-dark text-light p-3 border rounded" style="max-width: 720px; margin-top: 2rem;">
+    <canvas id="previewCanvas" class="w-100 border" width="640" height="360"></canvas>
+
+    <div class="form-group mt-3">
+      <label for="captionInput">台詞：</label>
+      <input type="text" id="captionInput" class="form-control" />
+    </div>
+
+    <div class="row my-2">
+      <div class="col">
+        <label class="form-label">Frame</label>
+        <input type="range" id="offsetSlider" class="form-range" min="0" max="0" step="1" />
+      </div>
+      <div class="col">
+        <label class="form-label">字體大小</label>
+        <input type="range" id="fontSizeSlider" class="form-range" min="10" max="60" step="1" value="20" />
+      </div>
+    </div>
+
+    <div class="row my-2">
+      <div class="col">
+        <label class="form-label">X Offset</label>
+        <input type="range" id="offsetX" class="form-range" min="-300" max="300" step="1" value="0" />
+      </div>
+      <div class="col">
+        <label class="form-label">Y Offset</label>
+        <input type="range" id="offsetY" class="form-range" min="-100" max="100" step="1" value="0" />
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-3 flex-wrap gap-2">
+      <button id="resetCaption" class="btn btn-secondary">重設台詞</button>
+      <button id="copyImage" class="btn btn-primary">複製圖片</button>
+      <button id="downloadImage" class="btn btn-info">下載 JPG</button>
+      <button id="closeEditor" class="btn btn-outline-light">關閉視窗</button>
+    </div>
+  </div>
+
+  <footer class="footer-with-bg">
+    <div class="footer-content position-relative z-1">
+      <div class="footer-bg"></div> <!-- ← 背景圖層 -->
+      <div class="mb-2">
+        <small>由於 Github Page 只允許 1GB，因此僅能提供 360p。</small>
+      </div>
+      <div>made with 🎸 by <a href="https://blog.hollen9.com">hollen9.com</a></div>
+      <div class="mt-2">
+        <a href="https://twitter.com/hollen9_tw" class="btn btn-lg mx-1" target="_blank">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://github.com/hollen9" class="btn btn-lg mx-1" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://hollen9.bsky.social" class="btn btn-lg mx-1" target="_blank" rel="me">
+          <i class="bi bi-bluesky"></i>
+        </a>
+        <a href="https://steamcommunity.com/id/hollen9" class="btn btn-lg mx-1" target="_blank" rel="me">
+          <i class="bi bi-steam"></i>
+        </a>
+        <a href="https://youtube.com/HollenXD" class="btn btn-lg mx-1" target="_blank" rel="me">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Choices.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <script src="main.js?ver=2025060721"></script>
+  
+</body>
+
+
+</html>
